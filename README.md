@@ -26,3 +26,9 @@ Include the following technologies:
 (env) [chris@fedora style-bootstrap]$ 
 
 ```
+
+### Important
+> pip install -r requirements.txt
+
+### Resources
+* Markdown, web:commonmark [link](https://commonmark.org/help/)
