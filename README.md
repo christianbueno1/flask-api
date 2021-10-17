@@ -8,7 +8,7 @@ Include the following technologies:
 ### File structure
 
 ```bash
-(env) [chris@fedora style-bootstrap]$ tree -I 'env|__pycache__'
+[chris@fedora style-bootstrap]$ tree -I 'env|__pycache__'
 .
 ├── app
 │   ├── __init__.py
@@ -20,11 +20,14 @@ Include the following technologies:
 │   └── templates
 │       ├── base.html
 │       └── index.html
-└── README.md
+├── instance
+│   └── development.yaml
+├── README.md
+├── requirements.txt
+└── tags-search-information.txt
 
-5 directories, 6 files
-(env) [chris@fedora style-bootstrap]$ 
-
+6 directories, 9 files
+[chris@fedora style-bootstrap]$ 
 ```
 
 ### Important
