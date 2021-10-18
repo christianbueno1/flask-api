@@ -27,30 +27,31 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form name="product-form" class="needs-validation" novalidate>
+                    <form class="needs-validation" novalidate>
                         <div class="mb-3">
                             <label for="description" class="col-form-label">Descripcion:</label>
-                            <input type="text" class="form-control" id="description" required>
+                            <input type="text" class="form-control" id="description" required placeholder="iphone 13">
                             <div class="invalid-feedback">Porfavor ingresa una descripcion</div>
                         </div>
                         <div class="mb-3">
                             <label for="sku" class="col-form-label">SKU:</label>
-                            <input type="text" pattern="^\w+$" class="form-control" id="sku" required>
+                            <input type="text" pattern="^\w+(-\w+)+$" class="form-control" id="sku" required placeholder="tec-mob-013">
                             <div class="invalid-feedback">Porfavor ingresa un valor valido</div>
                         </div>
                         <div class="mb-3">
                             <label for="price" class="col-form-label">Precio:</label>
-                            <input type="number" min="0.00" step="any" class="form-control" id="price" required>
+                            <input type="number" min="0.00" step="any" class="form-control" id="price" required placeholder="450.34">
                             <div class="invalid-feedback">Porfavor ingresa un precio valido</div>
                         </div>
                         <div class="mb-3">
                             <label for="quantity" class="col-form-label">Cantidad:</label>
-                            <input type="text" class="form-control" id="quantity" required>
+                            <input type="text" class="form-control" id="quantity" required placeholder="25">
                             <div class="invalid-feedback">Porfavor ingresa una cantidad valida</div>
                         </div>
-                        <div class="">
-                            <button type="submit" class="btn btn-primary" id="new-product" form="product-form">Nuevo</button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <div>
+                            <button class="btn btn-primary" type="submit" id="new-product">Nuevo</button>
+                            <button type="reset" class="btn btn-secondary">Resetear</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                         </div>
                     </form>
                 </div>
@@ -121,6 +122,10 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="validation">
+
+    </div>
 
 </div>
 {% endblock %}

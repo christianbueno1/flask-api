@@ -44,3 +44,4 @@ const product = {
 }
 console.log(6);
 document.addEventListener('DOMContentLoaded', app.init);
+
