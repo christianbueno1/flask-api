@@ -35,3 +35,8 @@ Include the following technologies:
 
 ### Resources
 * Markdown, web:commonmark [link](https://commonmark.org/help/)
+
+### Flask run
+    export FLASK_APP=appname
+    export FLASK_ENV=development
+    flask run --host=127.0.0.1 --port=5001

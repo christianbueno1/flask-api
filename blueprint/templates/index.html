@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% block title %}test blueprint{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block client %}
+{% endblock %}
+
+{% block product %}
+<div class="container bg-light">
+    <div class="container">
+        <div class="row justify-content-end pt-3">
+            <div class="col-1">
+                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    data-bs-whatever="@mdo">Nuevo</button>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nuevo Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form name="product-form" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="description" class="col-form-label">Descripcion:</label>
+                            <input type="text" class="form-control" id="description" required>
+                            <div class="invalid-feedback">Porfavor ingresa una descripcion</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="sku" class="col-form-label">SKU:</label>
+                            <input type="text" pattern="^\w+$" class="form-control" id="sku" required>
+                            <div class="invalid-feedback">Porfavor ingresa un valor valido</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="price" class="col-form-label">Precio:</label>
+                            <input type="number" min="0.00" step="any" class="form-control" id="price" required>
+                            <div class="invalid-feedback">Porfavor ingresa un precio valido</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="quantity" class="col-form-label">Cantidad:</label>
+                            <input type="text" class="form-control" id="quantity" required>
+                            <div class="invalid-feedback">Porfavor ingresa una cantidad valida</div>
+                        </div>
+                        <div class="">
+                            <button type="submit" class="btn btn-primary" id="new-product" form="product-form">Nuevo</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">sku</th>
+                <th scope="col">precio</th>
+                <th scope="col">cantidad</th>
+                <th scope="col">fecha creacion</th>
+                <th scope="col">fecha actualizacion</th>
+                <th scope="col">Accion</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <th>{{ product.id }}</th>
+                <td>{{ product.description }}</td>
+                <td>{{ product.sku }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.quantity }}</td>
+                <td>{{ product.created_on }}</td>
+                <td>{{ product.updated_on }}</td>
+                <td>
+                    <a href="#" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i
+                            class="bi bi-pen"></i></a>
+                    <a href="#" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i
+                            class="bi bi-trash"></i></a>
+                </td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <th scope="row">2</th>
+                <td>sansum galaxy</td>
+                <td>tech-mob-002</td>
+                <td>1900.99</td>
+                <td>68</td>
+                <td>2021-10-17</td>
+                <td>2021-10-17</td>
+                <td>
+                    <a href="#" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i
+                            class="bi bi-pen"></i></a>
+                    <a href="#" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i
+                            class="bi bi-trash"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>monitor 2k 25 pulg.</td>
+                <td>tech-mon-005</td>
+                <td>890.78</td>
+                <td>450</td>
+                <td>2021-10-17</td>
+                <td>2021-10-17</td>
+                <td>
+                    <a href="#" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i
+                            class="bi bi-pen"></i></a>
+                    <a href="#" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i
+                            class="bi bi-trash"></i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}

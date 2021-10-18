@@ -1,7 +1,7 @@
 ---
   #development
   DATABASE_ENGINE: mariadb
-  DATABSE_CONNECTOR: mariadbdconnector
+  DATABASE_CONNECTOR: mariadbdconnector
   DATABASE_USER: chris
   DATABASE_PASSWORD: ecuador
   DATABASE_HOST: localhost
@@ -9,4 +9,5 @@
   DATABASE_DB: company
   SQLALCHEMY_DATABASE_URI: mariadb+mariadbconnector://chris:ecuador@127.0.0.1:3306/company
   SQLALCHEMY_TRACK_MODIFICATIONS: False
+  SECRET_KEY: secret-key-goes-here
 ...
