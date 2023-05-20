@@ -1,5 +1,0 @@
-style-bootstrap directory
-url_for static, include links in link tag
-Bootstrap 5, traversy-media
-yt url https://www.youtube.com/watch?v=4sosXZsdy-s
-
