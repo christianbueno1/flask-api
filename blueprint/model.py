@@ -70,7 +70,6 @@ class Product(db.Model):
         self.description = description
         self.client_id = client_id
         self.price = price
-        # self.quantity = 1 if quantity is None else quantity
         self.quantity = quantity
 
 
