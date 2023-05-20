@@ -9,3 +9,7 @@ dist/
 build/
 *.egg-info/
 db.sqlite
+
+
+bakup/
+.zshrc
