@@ -62,8 +62,8 @@ class Product(db.Model):
 
     def __repr__(self):
         #literal string interpolation '''
-        return f'''<Product\n{self.id}\n{self.sku}\n{self.description}\n
-            {self.price}\n{self.quantity}\n{self.client_id}>'''
+        return (f'<Product\n{self.id}\n{self.sku}\n{self.description}\n'
+            f'{self.price}\n{self.quantity}\n{self.client_id}>')
     
     def __init__(self, sku, description, client_id, price=0, quantity=0):
         self.sku = sku

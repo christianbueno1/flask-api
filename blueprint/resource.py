@@ -71,10 +71,10 @@ class ProductAPI(Resource):
     def put(self, id):
         product = Product.query.get(id)
         if product:
-            product.sku = ns.payload["sku"],
-            product.description = ns.payload["description"],
-            product.price = ns.payload["price"],
-            product.quantity = ns.payload["quantity"],
+            product.sku = ns.payload["sku"]
+            product.description = ns.payload["description"]
+            product.price = ns.payload["price"]
+            product.quantity = ns.payload["quantity"]
             product.client_id = ns.payload["client_id"]
             db.session.commit()
             return product
